@@ -133,6 +133,29 @@ var Layout = function () {
         });
     }
 
+    // Contact form details
+$('#Contact-form').submit(function(e){
+
+var name = document.getElementById('inputName')
+    email= document.getElementById('inputEmail')
+    message = document.getElementById('inputMessage');
+if (!name.value || !email.value || !message.value) {
+    alertify.error('Please check your entries')
+} else {
+$.ajax({
+    url: "https://mail.google.com/kamaunewton78@gmail.com"
+    method: "POST",
+    data: $(this).serialize(),
+});
+
+    e.preventDefault()
+    $(this).get(0).reset()
+    alertify.success('Your message has been sent, thank you!!')
+}
+
+});
+
+
     return {
         init: function () {
             // initial setup for fixed header
