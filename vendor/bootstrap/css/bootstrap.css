@@ -6239,10 +6239,12 @@ button.close {
 }
 .carousel {
   position: relative;
+  max-height: 500px !important;
 }
 .carousel-inner {
   position: relative;
   width: 100%;
+  max-height: 100px !important;
   overflow: hidden;
 }
 .carousel-inner > .item {
